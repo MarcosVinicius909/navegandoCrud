@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Protocolo HTTP - CRUD - UPDATE</h1>
+    <hr>
+    <br>
+    <h2>Voltar para a tela inicial:</h2>
+    <br>
+    <a href="index.html"><button>Voltar</button></a>
+    <br><br>
+    <hr>
+    <br>
+    <h3>Busque um dado no servidor utilizando o CPF, após isso, você pode atualizar os dados e reenviar com os dados atualizados para o banco de dados</h3>
+    <br>
+    <h2>UPDATE</h2>
+    <br>
+    <label>ID:</label>
+    <input type="text" id="id" readonly>
+    <br><br>
+    <label>Nome:</label>
+    <input type="text" id="nomeAtualizar">
+    <br><br>
+    <label>Idade:</label>
+    <input type="text" id="idadeAtualizar">
+    <br><br>
+    <label>CPF:</label>
+    <input type="text" id="cpfAtualizar" placeholder="Digite o CPF para busca">
+    <br><br>
+    <input type="button" class="inpu" onclick="buscarDados()" value="Buscar">
+    <input type="button" class="inpu" onclick="atualizarDados()" value="Atualizar">
+
+    <script src="script.js"></script>
+</body>
+</html>
