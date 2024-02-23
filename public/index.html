@@ -6,34 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <h1>Protocolo HTTP - CRUD</h1>
+    <h1>Login</h1>
+    <br>
     <hr>
     <br>
-    <h2>Selecione o que você gostaria de fazer?</h2>
-    <br>
-    <a href="post.html"><button>POST</button></a>
-    <a href="put.html"><button>UPDATE</button></a>
-    <a href="delete.html"><button>DELETE</button></a>
+    <label>Email:</label>
+    <input type="text" id="email" required>
+    <br><br>
+    <label>Senha:</label>
+    <input type="password" id="senha" required>
+    <br><br>
+    <button id="btn" type="button" onclick="fazerLogin()">Enviar</button>
     <br><br>
     <hr>
-    <br>
 
-    <form>        
-        <h1>Dados Cadastrais - GET</h1>
-        <br>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Idade</th>
-                <th>CPF</th>
-            </tr>
-            <tbody id="tabela-corpo"></tbody>
-        </table>
-    </form>
-
-    <script src="script.js"></script>
+    <script src="cadastro.js"></script>
 </body>
 </html>

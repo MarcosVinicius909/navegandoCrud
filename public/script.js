@@ -1,3 +1,28 @@
+//POST - Cadastro
+/* function enviarCa() {
+  const email = document.getElementById("emailCa").value;
+  const senha = document.getElementById("senhaCa").value;
+  const confsenha = document.getElementById("confsenhaCa").value;
+
+  fetch("cadastro", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email: email, senha: senha, confsenha: confsenha }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+      // limpa os inputs do formulário
+      document.getElementById("emailCa").value = "";
+      document.getElementById("senhaCa").value = "";
+      document.getElementById("confsenhaCa").value = "";
+    });
+} */
+
+//=========================================================================================
+
 //POST
 function enviarDados() {
   const nome = document.getElementById("nome").value;
@@ -81,6 +106,7 @@ function deletarDados() {
           fetch(`pessoas/${obj.id}`, {
             method: "DELETE",
           });
+          location.reload()
         }
       });
     });
@@ -88,18 +114,20 @@ function deletarDados() {
 
 //GET
 fetch(`pessoas`)
-  .then((response) => response.json())
-  .then((data) => {
-    const tabela = document.getElementById("tabela-corpo");
-    //Utilizado o loop ForEach para interar cada objeto no array retornado a API
-    data.forEach((objeto) => {
-      //Adicionado essa string de template ao conteudo HTML do corpo da tabela.
-      const linha = `<tr>
-            <td id="id">${objeto.id}</td>
-            <td>${objeto.nome}</td>
-            <td>${objeto.idade}</td>
-            <td>${objeto.cpf}</td>
-        </tr>`;
-      tabela.innerHTML += linha;
-    });
+.then((response) => response.json())
+.then((data) => {
+  const tabela = document.getElementById("tabela-corpo");
+  //Utilizado o loop ForEach para interar cada objeto no array retornado a API
+  data.forEach((objeto) => {
+    //Adicionado essa string de template ao conteudo HTML do corpo da tabela.
+    const linha = `<tr>
+          <td id="id">${objeto.id}</td>
+          <td>${objeto.nome}</td>
+          <td>${objeto.idade}</td>
+          <td>${objeto.cpf}</td>
+      </tr>`;
+    tabela.innerHTML += linha;
   });
+});
+
+//==========================================================================================================
