@@ -1,3 +1,6 @@
 Entre na minha aplicação!!!😁
 
-https://navegandocrud-x8ezna2w.b4a.run/
+Email: ADM6907
+Senha: 123!@
+
+https://navegandocrud1-igfu21ll.b4a.run/
